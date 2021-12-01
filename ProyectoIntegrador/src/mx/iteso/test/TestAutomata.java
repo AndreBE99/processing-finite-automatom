@@ -24,7 +24,7 @@ public class TestAutomata {
 		do {
 			action = getAction();
 			switch (action) {
-				case 1:
+				case 1: // File entry
 					// Start of file open
 				    JFileChooser chooser = new JFileChooser(new File("").getAbsolutePath());
 				    FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivo de texto del automata", "txt");
@@ -78,7 +78,8 @@ public class TestAutomata {
 				    // Validating input with conditions
 				    AFDValidator(automatom);
 					break;
-				case 2:
+					
+				case 2: // Manual entry
 					Scanner reader = new Scanner(System.in);
 					
 					// Reading the input string
