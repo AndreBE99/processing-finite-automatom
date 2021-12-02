@@ -27,12 +27,13 @@ public class TestAutomata {
 				case 1: // File entry
 					// Start of file open
 				    JFileChooser chooser = new JFileChooser(new File("").getAbsolutePath());
-				    FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivo de texto del automata", "txt");
+				    FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivo de texto del automata",
+				    		"txt");
 				    chooser.setFileFilter(filter);
 				    int returnVal = chooser.showOpenDialog(null);
 				    if (returnVal == JFileChooser.ERROR_OPTION || returnVal == JFileChooser.CANCEL_OPTION) {
 				      System.out.println("Por favor seleccione un archivo.");
-				      return;
+				      break;
 				    }
 
 				    File automaton = new File(chooser.getSelectedFile().getAbsolutePath());

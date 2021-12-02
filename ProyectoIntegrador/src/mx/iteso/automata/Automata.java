@@ -5,7 +5,6 @@ import java.util.TreeSet;
 
 public class Automata {
 	
-	
 	private String inputString = null;
     private ArrayList<Character> alphabet = new ArrayList<>();
     private int initialState = 0;
@@ -59,6 +58,6 @@ public class Automata {
         for (String s : line.split(";")) {
           this.transitionMatrix.get(row).add(Integer.parseInt(s));
         }
-		
 	}
+	
 }
